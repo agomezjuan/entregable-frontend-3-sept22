@@ -6,6 +6,7 @@
 // PROPS: App deberá pasar por props lo necesario a sus componenetes internos.
 import React, { useEffect } from "react";
 import Cabecera from "./components/Cabecera";
+import Footer from "./components/Footer";
 import Listado from "./components/Listado";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
       <Cabecera cantidad={cantidad} />
       <Listado incrementarCantidad={incrementarCantidad} />
+      <Footer />
     </div>
   );
 }
