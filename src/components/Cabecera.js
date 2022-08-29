@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import styled from "styled-components";
 
 // El componente Cabera no tiene componentes hijos.
 // ESTADO: Cabecera no tiene estado.
@@ -8,11 +9,17 @@ import React from 'react'
 //    h1
 //    p > span     (el span mostrará la cantidad recibida por props)
 
-export default function Cabecera() {
-  
+const Titulo = styled.h1`
+  font-size: 1.5rem;
+`;
+
+export default function Cabecera({ cantidad }) {
   return (
     <header>
-        {/* maquetar Cabecera aquí */}
+      <Titulo>Carrito de Compras</Titulo>
+      <p>
+        Cantidad de productos <span>{cantidad}</span>
+      </p>
     </header>
-  )
+  );
 }
